@@ -1,6 +1,7 @@
 import React, { useMemo, useRef, useState } from "react";
 import Carousel from "./components/Carousel";
 import Drawer from "./components/Drawer";
+import Gallery from "./components/Gallery";
 import { pages } from "./pages";
 import pic1 from "./assets/photos/pic1.jpg";
 import pic2 from "./assets/photos/pic2.jpg";
@@ -8,7 +9,23 @@ import pic3 from "./assets/photos/pic3.jpg";
 import pic4 from "./assets/photos/pic4.jpg";
 // import pic5 from "./assets/photos/pic5.jpg";
 
+import g1 from "./assets/photos/g1.jpg";
+import g2 from "./assets/photos/g2.jpg";
+import g3 from "./assets/photos/g3.jpg";
+import g4 from "./assets/photos/g4.jpg";
+import g5 from "./assets/photos/g5.jpg";
+import g6 from "./assets/photos/g6.jpg";
+import g7 from "./assets/photos/g7.jpg";
+import g8 from "./assets/photos/g8.jpg";
+import g9 from "./assets/photos/g9.jpg";
+import g10 from "./assets/photos/g10.jpg";
+import g11 from "./assets/photos/g11.jpg";
+import g12 from "./assets/photos/g12.jpg";
+
+
 const images = [pic1, pic2, pic3, pic4];
+const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12];
+
 
 function Section({
   id,
@@ -35,6 +52,7 @@ export default function App() {
 
   // Reference to the right scroll container (important on desktop)
   const rightScrollRef = useRef<HTMLDivElement | null>(null);
+
 
   const menuItems = useMemo(
     () => [
@@ -111,103 +129,14 @@ export default function App() {
                 </Section>
               ))
             }
-            <Section id="rsvp" title="RSVP">
-              <p>
-                Add your RSVP form here. If you want it to feel “Joy-like”, keep
-                it minimal and use a single primary button.
-              </p>
-              <div className="mt-6">
-                <button className="rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-neutral-800">
-                  RSVP
-                </button>
-              </div>
-            </Section>
 
-            <Section id="schedule" title="Schedule">
-              <ul className="space-y-3">
-                <li>
-                  <span className="font-medium">4:30 PM</span> — Guests arrive
-                </li>
-                <li>
-                  <span className="font-medium">5:00 PM</span> — Ceremony
-                </li>
-                <li>
-                  <span className="font-medium">6:00 PM</span> — Cocktail hour
-                </li>
-                <li>
-                  <span className="font-medium">7:00 PM</span> — Dinner &amp;
-                  dancing
-                </li>
-              </ul>
-            </Section>
-
-            <Section id="accommodations" title="Accommodations">
-              <div className="space-y-6">
-                {[
-                  {
-                    name: "Hotel One",
-                    distance: "8 min drive",
-                    address: "123 Main St, City",
-                    url: "#",
-                  },
-                  {
-                    name: "Hotel Two",
-                    distance: "12 min drive",
-                    address: "456 Oak Ave, City",
-                    url: "#",
-                  },
-                ].map((h) => (
-                  <div
-                    key={h.name}
-                    className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <div className="text-lg font-semibold text-neutral-900">
-                          {h.name}
-                        </div>
-                        <div className="mt-1 text-sm text-neutral-600">
-                          {h.distance}
-                        </div>
-                        <div className="mt-2 text-sm text-neutral-700">
-                          {h.address}
-                        </div>
-                      </div>
-                      <a
-                        href={h.url}
-                        className="shrink-0 rounded-full bg-neutral-900 px-4 py-2 text-sm font-semibold text-white hover:bg-neutral-800"
-                      >
-                        Book
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Section>
-
-            <Section id="faq" title="FAQ">
-              <div className="space-y-4">
-                <div>
-                  <div className="font-medium text-neutral-900">
-                    What should I wear?
-                  </div>
-                  <div className="text-neutral-700">
-                    Cocktail attire. Bring a light layer for the evening.
-                  </div>
-                </div>
-                <div>
-                  <div className="font-medium text-neutral-900">
-                    Can I bring a plus one?
-                  </div>
-                  <div className="text-neutral-700">
-                    If your invite says so, yes 🙂
-                  </div>
-                </div>
-              </div>
-            </Section>
+            <div className="lg:col-span-2 mt-8">
+              <Gallery images={galleryImages} />
+            </div>
+        
 
             <div className="py-10 text-sm text-neutral-500">
-              © {new Date().getFullYear()} — Your Wedding Site
+              © {new Date().getFullYear()} — Giu&Bru eventos
             </div>
           </div>
         </div>
