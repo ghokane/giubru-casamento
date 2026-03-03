@@ -21,10 +21,12 @@ import g9 from "./assets/photos/g9.jpg";
 import g10 from "./assets/photos/g10.jpg";
 import g11 from "./assets/photos/g11.jpg";
 import g12 from "./assets/photos/g12.jpg";
+import g13 from "./assets/photos/g13.jpg";
+import g14 from "./assets/photos/g14.jpg";
 
 
 const images = [pic1, pic2, pic3, pic4];
-const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12];
+const galleryImages = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12,g13,g14];
 
 
 function Section({

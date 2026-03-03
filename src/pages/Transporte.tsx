@@ -9,7 +9,7 @@ type transporte = {
 
 const transportes: transporte[] = [
   {
-    name: "Batistella Vans",
+    name: "Baptistella Vans",
     distance: "Contato: Marta",
     address: "+55 (11) 97089-2646",
     url: "https://wa.me/5511970892646",
